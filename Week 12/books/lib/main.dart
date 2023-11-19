@@ -62,7 +62,7 @@ class _FuturePageState extends State<FuturePage> {
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Back from the future'),
+        title: const Text('Amalia Salsa Lutfiana'),
       ),
       body: Center(
         child: Column(children: [
@@ -96,5 +96,12 @@ class _FuturePageState extends State<FuturePage> {
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+  // Praktikum 1 Soal Nomor 2
+  Future<Response> getData() async {
+    const authority = 'www.googleapis.com';
+    const path = '/books/v1/volumes/F9lxDQAAQBAJ';
+    Uri url = Uri.https(authority, path);
+    return http.get(url);
   }
 }
