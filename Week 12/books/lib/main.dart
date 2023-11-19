@@ -58,6 +58,24 @@ class _FuturePageState extends State < FuturePage > {
   // Praktikum 3 Langkah 2
   late Completer completer;
 
+  // Praktikum 4 Langkah 1
+  void returnFG() {
+    FutureGroup<int> futureGroup = FutureGroup<int>();
+    futureGroup.add(returnOneAsync());
+    futureGroup.add(returnTwoAsync());
+    futureGroup.add(returnThreeAsync());
+    futureGroup.close();
+    futureGroup.future.then((List <int> value){
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
+  }
+
   Future getNumber() {
     completer = Completer < int > ();
     calculate();
@@ -104,16 +122,18 @@ class _FuturePageState extends State < FuturePage > {
               ElevatedButton(
                 child: const Text('GO!'),
                   onPressed: () {
+                    // Praktikum 4 Langkah 2
+                    returnFG();
                     // count();
 
-                    // Praktikum 3 Langkah 6
-                    getNumber().then((value) {
-                      setState(() {
-                        result = value.toString();
-                      });
-                    }).catchError((e) {
-                      result= 'An error occured';
-                    });
+                    // // Praktikum 3 Langkah 6
+                    // getNumber().then((value) {
+                    //   setState(() {
+                    //     result = value.toString();
+                    //   });
+                    // }).catchError((e) {
+                    //   result= 'An error occured';
+                    // });
                   },
               ),
 
