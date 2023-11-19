@@ -67,10 +67,24 @@ class _FuturePageState extends State<FuturePage> {
       body: Center(
         child: Column(children: [
           const Spacer(),
+          // ElevatedButton(
+          //   child: const Text('GO!'),
+          //   onPressed: () {},
+          // ),
+          // Praktikum 1 Langkah 5 Soal Nomor 3
           ElevatedButton(
-            child: const Text('GO!'),
-            onPressed: () {},
-          ),
+              child: const Text('GO!'),
+              onPressed: () {
+                setState(() {});
+                getData().then((value) {
+                  result = value.body.toString().substring(0, 450);
+                  setState(() {});
+                }).catchError((_) {
+                  result = 'An error occurred';
+                  setState(() {});
+                });
+              },
+            ),
           const Spacer(),
           Text(result),
           const Spacer(),
@@ -104,4 +118,19 @@ class _FuturePageState extends State<FuturePage> {
     Uri url = Uri.https(authority, path);
     return http.get(url);
   }
+
+  // ElevatedButton(
+  //   child: Text('GO!'),
+  //   onPressed: (){
+  //     setState(() {});
+  //     getData()
+  //     .then((value) {
+  //       result = value.body.toString().substring(0, 450);
+  //       setState(() {});
+  //     }).catchError((_)){
+  //       result = 'An error occured';
+  //       setState(() {});
+  //     });
+  //   },
+  // ),
 }
