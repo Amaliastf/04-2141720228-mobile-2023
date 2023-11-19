@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart'
 as http;
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,6 +55,19 @@ class FuturePage extends StatefulWidget {
 class _FuturePageState extends State < FuturePage > {
   // Praktikum 1 Langkah 3
   String result = '';
+  // Praktikum 3 Langkah 2
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer < int > ();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
+  }
   // int _counter = 0;
 
   // void _incrementCounter() {
@@ -72,13 +86,28 @@ class _FuturePageState extends State < FuturePage > {
       body: Center(
         child: Column(children: [
             const Spacer(),
-            // Praktikum 2 Langkah 3
+              // Praktikum 2 Langkah 3
+              // ElevatedButton(
+              //   child: const Text('GO!'),
+              //     onPressed: () {
+              //       count();
+              //     },
+              // ),
+
+              // Praktikum 3 Langkah 3
               ElevatedButton(
                 child: const Text('GO!'),
-                onPressed: () {
-                  count();
-                },
+                  onPressed: () {
+                    count();
+
+                    getNumber().then((value) {
+                      setState(() {
+                        result = value.toString();
+                      });
+                    });
+                  },
               ),
+
               // // Praktikum 1 Langkah 5 Soal Nomor 3
               // ElevatedButton(
               //   child: const Text('GO!'),
@@ -142,6 +171,7 @@ class _FuturePageState extends State < FuturePage > {
     await Future.delayed(const Duration(seconds: 3));
     return 3;
   }
+
   // Praktikum 2 Langkah 2
   Future count() async {
     int total = 0;
