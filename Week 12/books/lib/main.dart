@@ -64,9 +64,15 @@ class _FuturePageState extends State < FuturePage > {
     return completer.future;
   }
 
+  // Praktikum 3 Langkah 5
   Future calculate() async {
+    try {
     await Future.delayed(const Duration(seconds: 5));
     completer.complete(42);
+    }
+    catch (_) {
+      completer.completeError({});
+    }
   }
   // int _counter = 0;
 
@@ -98,12 +104,15 @@ class _FuturePageState extends State < FuturePage > {
               ElevatedButton(
                 child: const Text('GO!'),
                   onPressed: () {
-                    count();
+                    // count();
 
+                    // Praktikum 3 Langkah 6
                     getNumber().then((value) {
                       setState(() {
                         result = value.toString();
                       });
+                    }).catchError((e) {
+                      result= 'An error occured';
                     });
                   },
               ),
