@@ -62,6 +62,7 @@ class _FuturePageState extends State < FuturePage > {
   late Completer completer;
   // Praktikum 5 Langkah 1
   Future returnError() async {
+    // Praktikum 6 Soal Nomor 12
     await Future.delayed(const Duration(seconds: 2));
     throw Exception('Something terrible happened!');
   }

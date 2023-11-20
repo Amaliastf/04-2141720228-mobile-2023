@@ -15,7 +15,6 @@ class _LocationScreenState extends State<LocationScreen> {
   void initState() {
     super.initState();
     getPosition().then((Position myPos) {
-      Future.delayed(const Duration(seconds: 3));
       myPosition = 'Latitude: ${myPos.latitude.toString()} - Longitude:{myPos.longitude.toString()}';
       setState(() {
         myPosition = myPosition;
@@ -42,6 +41,7 @@ class _LocationScreenState extends State<LocationScreen> {
   Future<Position> getPosition() async {
     await Geolocator.requestPermission();
     await Geolocator.isLocationServiceEnabled();
+    await Future.delayed(const Duration(seconds: 3));
     Position? position = 
       await Geolocator.getCurrentPosition();
       return position;
