@@ -6,6 +6,7 @@ as http;
 import 'package:async/async.dart';
 import 'package:books/geolocation.dart';
 import 'package:books/navigation_first.dart';
+import 'package:books/navigation_dialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,8 +28,10 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
       ),
-      // Praktikum 8 Langkah 6
-      home: const NavigationFirst(),
+      // Praktikum 9 Langkah 5
+      home: const NavigationDialogScreen(),
+      // // Praktikum 8 Langkah 6
+      // home: const NavigationFirst(),
       // // Praktkum 6 Langkah 6
       // home: LocationScreen(),
       // Praktikum 1 Soal 1
