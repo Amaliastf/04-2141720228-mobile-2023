@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Amal',
+      title: 'Amalia Salsa Lutfiana',
       theme: ThemeData(
         // Praktikum 1 Soal 1
         primarySwatch: Colors.blue,
@@ -150,21 +150,21 @@ class _FuturePageState extends State < FuturePage > {
                 child: const Text('GO!'),
                   onPressed: () {
                     // Praktikum 5 Soal nomor 10
-                    handleError()
+                    handleError();
                     // // Praktikum 5 Langkah 2
                     // returnError()
-                    .then((value){
-                      setState(() {
-                        result = 'Succes';
-                      });
-                    }).catchError((onError){
-                      setState(() {
-                        result = onError.toString();
-                      });
-                    }).whenComplete(() => print('Complete'));
-                    // Praktikum 4 Langkah 2
-                    returnFG();
-                    count();
+                    // .then((value){
+                    //   setState(() {
+                    //     result = 'Succes';
+                    //   });
+                    // }).catchError((onError){
+                    //   setState(() {
+                    //     result = onError.toString();
+                    //   });
+                    // }).whenComplete(() => print('Complete'));
+                    // // Praktikum 4 Langkah 2
+                    // returnFG();
+                    // count();
 
                     // // Praktikum 3 Langkah 6
                     // getNumber().then((value) {
