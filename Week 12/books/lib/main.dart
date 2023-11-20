@@ -4,6 +4,7 @@ import 'package:http/http.dart';
 import 'package:http/http.dart'
 as http;
 import 'package:async/async.dart';
+import 'package:books/geolocation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,8 +26,10 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
       ),
+      // Praktkum 6 Langkah 6
+      home: LocationScreen(),
       // Praktikum 1 Soal 1
-      home: const FuturePage(),
+      // home: const FuturePage(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -217,6 +220,8 @@ class _FuturePageState extends State < FuturePage > {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+
   // Praktikum 1 Soal Nomor 2
   Future < Response > getData() async {
     const authority = 'www.googleapis.com';
