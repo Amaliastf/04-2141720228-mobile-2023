@@ -5,6 +5,7 @@ import 'package:http/http.dart'
 as http;
 import 'package:async/async.dart';
 import 'package:books/geolocation.dart';
+import 'package:books/navigation_first.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,8 +27,10 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
       ),
-      // Praktkum 6 Langkah 6
-      home: LocationScreen(),
+      // Praktikum 8 Langkah 6
+      home: const NavigationFirst(),
+      // // Praktkum 6 Langkah 6
+      // home: LocationScreen(),
       // Praktikum 1 Soal 1
       // home: const FuturePage(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
