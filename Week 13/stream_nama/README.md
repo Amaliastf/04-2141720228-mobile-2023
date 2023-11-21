@@ -22,3 +22,13 @@ Kode yield sendiri berfungsi untuk menghasilkan nilai dari suatu stream. yang ma
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 
 ![gif steam_nama](images/soal4.gif)
+
+
+**Soal 5**
+
+Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
+
+Pada kode tersebut, listen diguanakan untuk menangkap perubahan pada suatu stream. listen sendiri merupakan metode dari Stream untuk mendaftarkan fungsi callback yang dipanggil setiap kali ada data yang dikirimkan melalui stream.
+
+Sedangkan await for digunakan untuk mengonsumsi suatu stream secara langsung untuk menghasilkan sebuah nilai dengan menunggu satu per satu.
+
