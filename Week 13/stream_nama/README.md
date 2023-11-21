@@ -15,3 +15,10 @@ Kode yield sendiri berfungsi untuk menghasilkan nilai dari suatu stream. yang ma
 - Stream.periodic = menghasilkan suatu stream yang mengeluarkan nilai pada waktu tertentu
 - (int t) { = memberikan logika untuk menghasilkan nilai
 - colors[index] = nilai yang dihasilkan pada setiap iterasi, dan nilai ini kemudian di-"yield" ke stream utama
+
+
+**Soal 4**
+
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![gif steam_nama](images/soal4.gif)
