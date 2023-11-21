@@ -1,16 +1,17 @@
-# stream_nama
+# Praktikum 13
 
-A new Flutter project.
+Amalia Salsa Lutfiana
+3F/04/2141720228
 
-## Getting Started
+**Soal 3**
 
-This project is a starting point for a Flutter application.
+1. Jelaskan fungsi keyword yield* pada kode tersebut!
 
-A few resources to get you started if this is your first Flutter project:
+Kode yield sendiri berfungsi untuk menghasilkan nilai dari suatu stream. yang mana mada kode diatas berfungsi untuk menggabungkan hasil dari suatu stream ke dalam stream yang tengah didefinisikan untuk menghasilkan sebuah nilai.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Apa maksud isi perintah kode tersebut?
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- yield* = digunakan untuk menghasilkan nilai dari suatu stream
+- Stream.periodic = menghasilkan suatu stream yang mengeluarkan nilai pada waktu tertentu
+- (int t) { = memberikan logika untuk menghasilkan nilai
+- colors[index] = nilai yang dihasilkan pada setiap iterasi, dan nilai ini kemudian di-"yield" ke stream utama

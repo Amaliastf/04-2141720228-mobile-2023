@@ -13,4 +13,14 @@ class ColorSteam {
     // Colors.lightBlue,
     // Colors.teal
   ];
+  //Praktikum 1 Langkah 5
+  Stream<Color> getColors() async* {
+    //Praktikum 1 Langkah 6
+    yield*Stream.periodic(
+      const Duration(seconds: 1), (int t) {
+        int index = t % colors.length;
+        return colors[index];
+      }
+    );
+  }
 }
