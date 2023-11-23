@@ -55,6 +55,9 @@ class _StreamHomePageState extends State < StreamHomePage > {
   late StreamTransformer transformer;
   // Praktikum 4 Langkah 1
   late StreamSubscription subscription;
+  // Praktikum 5 Langkah 1
+  late StreamSubscription subscription2;
+  String values = '';
   // Praktikum 1 Langkah 8
   Color bgColor = Colors.blueGrey;
   late ColorSteam colorSteam;
@@ -137,11 +140,23 @@ class _StreamHomePageState extends State < StreamHomePage > {
 
     // Praktikum 4 Langkah 2
     Stream stream = numberStreamController.stream;
+    // Praktikum 5 Langkah 2
     subscription = stream.listen((event) {
       setState(() {
-        lastNumber = event;
+        values += '$event - ';
       });
     });
+
+    subscription2 = stream.listen((event) {
+      setState(() {
+        values += '$event - ';
+      });
+    });
+    // subscription = stream.listen((event) {
+    //   setState(() {
+    //     lastNumber = event;
+    //   });
+    // });
     super.initState();
 
     // Praktikum 4 Langkah 3

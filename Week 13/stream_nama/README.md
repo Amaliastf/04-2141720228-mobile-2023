@@ -90,3 +90,12 @@ Pada Langkah ke 8 dengan fungsi addRandomNumber() berguna untuk menambahkan angk
 
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![gif steam_nama](images/soal9.gif)
+
+
+**Soal 10**
+
+Jelaskan mengapa error itu bisa terjadi ?
+
+Pada langkah ini terdapat penggunaan variabel 'values' untuk menyimpan nilai stream dan ketika ditambahkan subscription2 lalu melakukan listen pada stream untuk kedua kalinya, hal ini dapat menyebabkan konflik dalam mengelola nilai values.
+
+![ss steam_nama](images/soal10.jpeg)
