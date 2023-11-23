@@ -46,3 +46,19 @@ Pada lagkah 10 secara keseluruhan berfungsi untuk menghasilkan bilangan bulat se
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 
 ![gif steam_nama](images/soal6.gif)
+
+
+**Soal 7**
+
+1. Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+
+Pada langkah 13 dtambahkan untuk memberikan pesan error terhadap sink yang masih terikat dengan controller
+
+Pada langkah 14 menambahkan handler untuk mengatasi kesalahan yang terjadi, yang mana jika ditemukan kesalahan maka kode dalam 'onError' akan dipanggil
+
+Pada langkah 15 jika kode tersebut dilakukan comment terhadap kode yang menghasilkan angka acak 0 dan 9. Dengan ditambahkannya 'numberStream.addError();' bertujuan untuk menambahkan pesan error jika terdapat suatu kesalahann atau kondisi yang tidak diinginkan.
+
+2. Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
+
+3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
+

@@ -16,6 +16,11 @@ class NumberStream {
   close() {
     controller.close();
   }
+
+  // Praktikum 2 Langkah 13
+  addError() {
+    controller.sink.addError('error');
+  }
 }
 
 class ColorSteam {
