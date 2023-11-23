@@ -32,3 +32,17 @@ Pada kode tersebut, listen diguanakan untuk menangkap perubahan pada suatu strea
 
 Sedangkan await for digunakan untuk mengonsumsi suatu stream secara langsung untuk menghasilkan sebuah nilai dengan menunggu satu per satu.
 
+
+**Soal 6**
+1. Jelaskan maksud kode langkah 8 dan 10 tersebut!
+
+Pada Langkah 8 memiliki Controller yang berfungsi mengontrol aliran data pasa stream. yang  kemudian pada stream.listen((event)) dilakukan pemanggilan metode listen untuk menangkap perubahan, sehingga ketika ada perubahan widget akan langsung diperbarui.
+
+Pada langkah 9, kode yang ditambahkan digunakan untuk melakukan pembersihan terhadap daya saat widget dihapus atau sedang tidak digunakan
+
+Pada lagkah 10 secara keseluruhan berfungsi untuk menghasilkan bilangan bulat secara acak dan menambahkannya yang kemudia diakses oleh widget yang merespons.
+
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![gif steam_nama](images/soal6.gif)

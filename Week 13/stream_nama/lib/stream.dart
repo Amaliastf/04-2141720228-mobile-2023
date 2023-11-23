@@ -1,4 +1,22 @@
 import 'package:flutter/material.dart';
+// Praktikum 2 Langkah 1
+import 'dart:async';
+
+// Praktikum 2 Langkah 2
+class NumberStream {
+  // Praktikum 2 Langkah 3
+  final StreamController<int> controller = StreamController();
+
+  // Praktikum 2 Langkah 4
+  void addNumberToSink(int newNumber) {
+    controller.sink.add(newNumber);
+  }
+
+  // Praktikum 2 Langkah 5
+  close() {
+    controller.close();
+  }
+}
 
 class ColorSteam {
   final List < Color > colors = [

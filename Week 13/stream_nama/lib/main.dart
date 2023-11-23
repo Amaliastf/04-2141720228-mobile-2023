@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 // Praktikum 1 Langkah 7
 import 'stream.dart';
+//P Praktikum 2 Langkah 6
+import 'dart:async';
+import 'dart:math';
 
 void main() {
   runApp(const MyApp());
@@ -36,9 +39,27 @@ class StreamHomePage extends StatefulWidget{
 }
 
 class _StreamHomePageState extends State<StreamHomePage> {
+  // Praktikum 2 Langkah 7
+  int lastNumber = 0;
+  late StreamController numberStreamController;
+  late NumberStream numberStream;
    // Praktikum 1 Langkah 8
   Color bgColor = Colors.blueGrey;
   late ColorSteam colorSteam;
+
+  // Praktikum 2 Langkah 9
+  @override
+  void dispose() {
+    numberStreamController.close();
+    super.dispose();
+  }
+
+  // Praktikum 2 Langkah 10
+  void addRandomNumber() {
+    Random random = Random();
+    int myNum = random.nextInt(10);
+    numberStream.addNumberToSink(myNum);
+  }
 
 // Praktikum 1 Langkah 11
   @override
@@ -47,8 +68,23 @@ class _StreamHomePageState extends State<StreamHomePage> {
       appBar: AppBar(
         title: const Text('Stream'),
       ),
-      body: Container(
-        decoration: BoxDecoration(color: bgColor),
+      // Praktikum 2 Langkah 11
+      body: SizedBox (
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(lastNumber.toString()),
+            ElevatedButton(
+              onPressed: () => addRandomNumber(),
+              child: Text('New Random Number'),
+              )
+          ],
+        ),
+      // body: Container(
+      //   decoration: BoxDecoration(color: bgColor),
+      // ),
       ),
     );
   }
@@ -65,9 +101,19 @@ class _StreamHomePageState extends State<StreamHomePage> {
   }
   @override
   void initState() {
+    // Praktkum 2 Langkah 8
+    numberStream = NumberStream();
+    numberStreamController = numberStream.controller;
+    Stream stream = numberStreamController.stream;
+    stream.listen((event) {
+      setState(() {
+        lastNumber = event;
+      });
+    });
     super.initState();
-    colorSteam = ColorSteam();
-    changeColor();
+    // super.initState();
+    // colorSteam = ColorSteam();
+    // changeColor();
   }
 }
 
