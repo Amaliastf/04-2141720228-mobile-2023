@@ -103,7 +103,9 @@ class _StreamHomePageState extends State < StreamHomePage > {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(lastNumber.toString()),
+            // Praktikum 5 Langkah 5
+            Text(values),
+            // Text(lastNumber.toString()),
             ElevatedButton(
               onPressed: () => addRandomNumber(),
               child: const Text('New Random Number'),
@@ -137,9 +139,11 @@ class _StreamHomePageState extends State < StreamHomePage > {
     // Praktkum 2 Langkah 8
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
+    // Praktikum 5 Langkah 4
+    Stream stream = numberStreamController.stream.asBroadcastStream();
 
-    // Praktikum 4 Langkah 2
-    Stream stream = numberStreamController.stream;
+    // // Praktikum 4 Langkah 2
+    // Stream stream = numberStreamController.stream;
     // Praktikum 5 Langkah 2
     subscription = stream.listen((event) {
       setState(() {

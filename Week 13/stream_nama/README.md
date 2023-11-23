@@ -99,3 +99,13 @@ Jelaskan mengapa error itu bisa terjadi ?
 Pada langkah ini terdapat penggunaan variabel 'values' untuk menyimpan nilai stream dan ketika ditambahkan subscription2 lalu melakukan listen pada stream untuk kedua kalinya, hal ini dapat menyebabkan konflik dalam mengelola nilai values.
 
 ![ss steam_nama](images/soal10.jpeg)
+
+
+**Soal 11**
+
+1. Jelaskan mengapa hal itu bisa terjadi ?
+
+karena dengan menambahkan kode pada langkah 4 dan 5 akan membuat stream menjadi boardcast yang dapat menangkap event dari stream.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![gif steam_nama](images/soal11.gif)
