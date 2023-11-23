@@ -76,3 +76,17 @@ Pada langkah ke 3 ditambahkan kode berikut bertujuan untuk mengambil aliran data
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 
 ![gif steam_nama](images/soal8.gif)
+
+
+**Soal 9**
+
+1. Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+
+Pada Langkah ke 2 data akan dikendalikan oleh numberStreamController yang mana nilai akan dilakukan perubahan dan pembaharuan pada lastNumber
+
+Pada Langkah ke 6 kode tersebut digunakan untuk membatalkan atau menghentikan subscription terhadap stream yang sebelumnya telah dibuat.
+
+Pada Langkah ke 8 dengan fungsi addRandomNumber() berguna untuk menambahkan angka acak ke dalam aliran data yang masih dikelola oleh numberStream setelah melalui pemeriksaan apakan controller sudah tidak dapat menerima yang baru.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![gif steam_nama](images/soal9.gif)
