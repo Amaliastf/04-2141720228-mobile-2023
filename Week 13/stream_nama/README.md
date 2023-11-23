@@ -62,3 +62,15 @@ Pada langkah 15 jika kode tersebut dilakukan comment terhadap kode yang menghasi
 
 3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
 
+
+**Soal 8**
+
+1. Jelaskan maksud kode langkah 1-3 tersebut!
+
+Pada langkah 1 ditambahkan kode diatas berfungsi untuk mengubah atau memanipulasi aliran data yang diterima dari objek 'Stream'
+
+Pada langkah 2 tersebut didefinisikan bagaiman aliran tipe int dapat diubah, yang mana nilai tersebut dikalikan dengan angka 10 lalu ditambahkan ke dalam sink dan jika ditemukan kesalahan,-1 akan dikirimkan ke sink, jadi ketika aliran selesai maka akan langsung ditutup 
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![gif steam_nama](images/soal8.gif)

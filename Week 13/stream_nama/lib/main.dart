@@ -43,6 +43,8 @@ class _StreamHomePageState extends State<StreamHomePage> {
   int lastNumber = 0;
   late StreamController numberStreamController;
   late NumberStream numberStream;
+  // Praktikum 3 Langkah 1
+  late StreamTransformer transformer;
    // Praktikum 1 Langkah 8
   Color bgColor = Colors.blueGrey;
   late ColorSteam colorSteam;
@@ -107,18 +109,44 @@ class _StreamHomePageState extends State<StreamHomePage> {
     // Praktkum 2 Langkah 8
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
+
+    // Praktikum 3 Langkah 2
+    transformer = StreamTransformer<int, int>.fromHandlers(
+      handleData: (value, sink) {
+        sink.add(value * 10);
+      },
+      handleError: (error, trace, sink){
+        sink.add(-1);
+      },
+      handleDone: (sink) => sink.close()
+    );
+
+    // Praktikum 3 Langkah 3
     Stream stream = numberStreamController.stream;
-    stream.listen((event) {
+    stream.transform(transformer).listen((event) { 
       setState(() {
         lastNumber = event;
       });
-      //Praktikum 2 Langkah 14
     }).onError((error) {
       setState(() {
         lastNumber = -1;
       });
-    });
+    }) ;
     super.initState();
+    // Stream stream = numberStreamController.stream;
+    // stream.listen((event) {
+    //   setState(() {
+    //     lastNumber = event;
+    //   });
+    //   //Praktikum 2 Langkah 14
+    // }).onError((error) {
+    //   setState(() {
+    //     lastNumber = -1;
+    //   });
+    // });
+    // super.initState();
+
+    
     // super.initState();
     // colorSteam = ColorSteam();
     // changeColor();
