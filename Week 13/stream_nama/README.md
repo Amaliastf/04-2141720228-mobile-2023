@@ -71,6 +71,8 @@ Pada langkah 1 ditambahkan kode diatas berfungsi untuk mengubah atau memanipulas
 
 Pada langkah 2 tersebut didefinisikan bagaiman aliran tipe int dapat diubah, yang mana nilai tersebut dikalikan dengan angka 10 lalu ditambahkan ke dalam sink dan jika ditemukan kesalahan,-1 akan dikirimkan ke sink, jadi ketika aliran selesai maka akan langsung ditutup 
 
+Pada langkah ke 3 ditambahkan kode berikut bertujuan untuk mengambil aliran data pada numberStreamController menggunakan transformer untuk kemudian menamngkap perubahan pada aliran  data yang telah diubah
+
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 
 ![gif steam_nama](images/soal8.gif)
